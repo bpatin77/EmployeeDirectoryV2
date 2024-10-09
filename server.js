@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
+app.use(express.json()); //is essential for working with JSON data in your Express app, allowing you to easily access parsed data from incoming requests.
+
 app.get("/", (req, res) => {
   res.send("Hello employees!");
 });
